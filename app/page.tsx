@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import {
   LatestProjects,
   Mission,
+  ProofMomentum,
   StackBand,
   TrustedTechnologies,
   WhatWeBuild,
@@ -19,6 +20,7 @@ export default function Home() {
       <Hero />
       <TrustedTechnologies />
       <WhatWeBuild />
+      <ProofMomentum />
       <Products />
       <Mission />
       <WhyRogueCircuit />
