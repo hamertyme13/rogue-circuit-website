@@ -1,56 +1,56 @@
-"use client";
-
-import { motion } from "framer-motion";
+import { Bot, ChartNoAxesCombined, Database, Gauge, Workflow } from "lucide-react";
 
 export default function DashboardPreview() {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 80 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1 }}
-      className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 shadow-2xl"
-    >
-      <div className="mb-6 flex items-center justify-between">
-        <h3 className="text-xl font-bold">GigOS Dashboard</h3>
+    <div className="rounded-lg border border-white/10 bg-[#0d1220]/90 p-5 shadow-2xl shadow-black/30 backdrop-blur-xl md:p-7">
+      <div className="mb-6 flex items-center justify-between border-b border-white/10 pb-5">
+        <div>
+          <p className="font-mono text-xs uppercase text-slate-500">Product command center</p>
+          <h3 className="mt-1 text-xl font-bold">Rogue Circuit OS</h3>
+        </div>
 
-        <span className="rounded-full bg-green-500/20 px-3 py-1 text-sm text-green-400">
+        <span className="rounded-full bg-emerald-400/15 px-3 py-1 text-sm font-semibold text-emerald-300">
           LIVE
         </span>
       </div>
 
-      <div className="space-y-5">
-
-        <div className="rounded-xl bg-slate-900 p-4">
-          <p className="text-slate-400 text-sm">
-            Today's Earnings
-          </p>
-
-          <h2 className="text-3xl font-bold text-green-400">
-            $243.15
-          </h2>
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div className="rounded-lg border border-emerald-300/20 bg-emerald-300/10 p-4">
+          <div className="mb-4 flex items-center gap-2 text-emerald-200">
+            <Gauge size={18} />
+            <p className="text-sm font-semibold">Automation Load</p>
+          </div>
+          <h2 className="text-3xl font-bold text-white">84%</h2>
+          <p className="mt-2 text-sm text-slate-300">Workflows optimized this week</p>
         </div>
 
-        <div className="rounded-xl bg-slate-900 p-4">
-          <p className="text-slate-400 text-sm">
-            AI Recommendation
-          </p>
-
-          <p className="mt-2">
-            Drive until 7:30 PM to maximize profit.
-          </p>
+        <div className="rounded-lg border border-cyan-300/20 bg-cyan-300/10 p-4">
+          <div className="mb-4 flex items-center gap-2 text-cyan-100">
+            <Bot size={18} />
+            <p className="text-sm font-semibold">AI Agents</p>
+          </div>
+          <h2 className="text-3xl font-bold text-white">12</h2>
+          <p className="mt-2 text-sm text-slate-300">Active product assistants</p>
         </div>
 
-        <div className="rounded-xl bg-slate-900 p-4">
-          <p className="text-slate-400 text-sm">
-            Weekly Goal
-          </p>
-
-          <div className="mt-3 h-3 rounded-full bg-slate-700">
-            <div className="h-3 w-3/4 rounded-full bg-green-400"></div>
+        <div className="rounded-lg border border-amber-300/20 bg-amber-300/10 p-4 sm:col-span-2">
+          <div className="mb-4 flex items-center justify-between gap-3">
+            <div className="flex items-center gap-2 text-amber-100">
+              <Workflow size={18} />
+              <p className="text-sm font-semibold">Current Build Queue</p>
+            </div>
+            <ChartNoAxesCombined size={18} className="text-amber-100" />
+          </div>
+          <div className="space-y-3 text-sm">
+            {["GigOS launch systems", "Document intelligence layer", "Sports analytics lab"].map((item) => (
+              <div key={item} className="flex items-center justify-between gap-4 rounded-md bg-black/20 px-3 py-2">
+                <span>{item}</span>
+                <Database size={15} className="shrink-0 text-slate-400" />
+              </div>
+            ))}
           </div>
         </div>
-
       </div>
-    </motion.div>
+    </div>
   );
 }

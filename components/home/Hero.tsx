@@ -1,69 +1,42 @@
-"use client";
-
-import { motion } from "framer-motion";
+import { ArrowRight, Eye } from "lucide-react";
 import Button from "@/components/ui/Button";
 import DashboardPreview from "./DashboardPreview";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden">
-      <div className="hero-glow" />
-
+    <section className="relative overflow-hidden border-b border-white/10">
       <div className="grid-background">
-        <div className="mx-auto grid min-h-[90vh] max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
-
-          {/* Left Side */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
-          >
-            <p className="mb-5 font-semibold text-green-400">
-              AI • Automation • Software
+        <div className="mx-auto grid min-h-[560px] max-w-7xl items-center gap-10 px-6 py-8 lg:grid-cols-[1.03fr_0.97fr]">
+          <div className="text-center lg:text-left">
+            <p className="mb-5 font-mono text-sm font-semibold uppercase text-cyan-200">
+              AI software studio
             </p>
 
-            <h1 className="text-6xl font-black leading-none md:text-8xl">
-              Build
-              <span className="text-green-400"> Smarter</span>
+            <h1 className="text-5xl font-black leading-[0.98] text-white md:text-6xl lg:text-7xl">
+              Building
+              <span className="block text-emerald-300">AI-Powered Software</span>
+              <span className="block text-slate-100">for the Next Generation</span>
             </h1>
 
-            <h2 className="mt-4 text-5xl font-black md:text-7xl">
-              Scale Faster
-            </h2>
-
-            <p className="mt-10 max-w-2xl text-xl text-slate-400">
-              We build AI-powered software that helps ambitious people
-              automate work, launch businesses, and turn ideas into reality.
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-slate-300 md:text-lg lg:mx-0">
+              We create intelligent SaaS platforms, automation tools, and AI
+              applications that help ambitious people build smarter and scale
+              faster.
             </p>
 
-            <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
-              <span className="rounded-full border border-green-500/20 px-4 py-2">
-                Next.js
-              </span>
-
-              <span className="rounded-full border border-green-500/20 px-4 py-2">
-                AI
-              </span>
-
-              <span className="rounded-full border border-green-500/20 px-4 py-2">
-                TypeScript
-              </span>
-
-              <span className="rounded-full border border-green-500/20 px-4 py-2">
-                PostgreSQL
-              </span>
+            <div className="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start">
+              <Button href="#products">
+                Explore Products
+                <ArrowRight size={17} />
+              </Button>
+              <Button href="#company" variant="secondary">
+                Our Vision
+                <Eye size={17} />
+              </Button>
             </div>
+          </div>
 
-            <div className="mt-12 flex flex-wrap justify-center gap-5 lg:justify-start">
-              <Button>Explore Products</Button>
-              <Button variant="secondary">Learn More</Button>
-            </div>
-          </motion.div>
-
-          {/* Right Side */}
           <DashboardPreview />
-
         </div>
       </div>
     </section>

@@ -7,7 +7,7 @@ export default function Card({
 }) {
   return (
     <div className="
-      rounded-3xl
+      rounded-lg
       border
       border-white/10
       bg-white/5
