@@ -1,30 +1,70 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Button from "@/components/ui/Button";
+import DashboardPreview from "./DashboardPreview";
+
 export default function Hero() {
   return (
-    <section className="mx-auto flex min-h-[85vh] max-w-7xl flex-col items-center justify-center px-6 text-center">
-      <p className="mb-4 rounded-full border border-green-500/30 bg-green-500/10 px-4 py-2 text-sm text-green-400">
-        🚀 AI • Automation • Software Development
-      </p>
+    <section className="relative overflow-hidden">
+      <div className="hero-glow" />
 
-      <h1 className="max-w-5xl text-5xl font-extrabold leading-tight md:text-7xl">
-        Building AI Software
-        <br />
-        <span className="text-green-400">For Ambitious People</span>
-      </h1>
+      <div className="grid-background">
+        <div className="mx-auto grid min-h-[90vh] max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
 
-      <p className="mt-8 max-w-3xl text-lg text-slate-400 md:text-xl">
-        Rogue Circuit creates AI-powered applications, automation tools,
-        and business software that help entrepreneurs, freelancers,
-        and growing companies work smarter.
-      </p>
+          {/* Left Side */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center lg:text-left"
+          >
+            <p className="mb-5 font-semibold text-green-400">
+              AI • Automation • Software
+            </p>
 
-      <div className="mt-12 flex flex-wrap justify-center gap-4">
-        <button className="rounded-xl bg-green-500 px-8 py-4 font-semibold text-black transition hover:bg-green-400">
-          Explore Products
-        </button>
+            <h1 className="text-6xl font-black leading-none md:text-8xl">
+              Build
+              <span className="text-green-400"> Smarter</span>
+            </h1>
 
-        <button className="rounded-xl border border-slate-700 px-8 py-4 transition hover:border-green-500">
-          Learn More
-        </button>
+            <h2 className="mt-4 text-5xl font-black md:text-7xl">
+              Scale Faster
+            </h2>
+
+            <p className="mt-10 max-w-2xl text-xl text-slate-400">
+              We build AI-powered software that helps ambitious people
+              automate work, launch businesses, and turn ideas into reality.
+            </p>
+
+            <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
+              <span className="rounded-full border border-green-500/20 px-4 py-2">
+                Next.js
+              </span>
+
+              <span className="rounded-full border border-green-500/20 px-4 py-2">
+                AI
+              </span>
+
+              <span className="rounded-full border border-green-500/20 px-4 py-2">
+                TypeScript
+              </span>
+
+              <span className="rounded-full border border-green-500/20 px-4 py-2">
+                PostgreSQL
+              </span>
+            </div>
+
+            <div className="mt-12 flex flex-wrap justify-center gap-5 lg:justify-start">
+              <Button>Explore Products</Button>
+              <Button variant="secondary">Learn More</Button>
+            </div>
+          </motion.div>
+
+          {/* Right Side */}
+          <DashboardPreview />
+
+        </div>
       </div>
     </section>
   );
