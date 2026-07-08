@@ -2,21 +2,21 @@ import { Bot, ChartNoAxesCombined, Database, Gauge, Workflow } from "lucide-reac
 
 export default function DashboardPreview() {
   return (
-    <div className="rounded-lg border border-white/10 bg-[#0d1220]/90 p-5 shadow-2xl shadow-black/30 backdrop-blur-xl md:p-7">
+    <div className="rc-bg-surface-raised rounded-lg border border-white/10 p-5 shadow-2xl shadow-black/30 backdrop-blur-xl md:p-7">
       <div className="mb-6 flex items-center justify-between border-b border-white/10 pb-5">
         <div>
           <p className="font-mono text-xs uppercase text-slate-500">Product command center</p>
           <h3 className="mt-1 text-xl font-bold">Rogue Circuit OS</h3>
         </div>
 
-        <span className="rounded-full bg-emerald-400/15 px-3 py-1 text-sm font-semibold text-emerald-300">
+        <span className="rc-border-primary-soft rc-bg-primary-soft rc-text-primary rounded-full border px-3 py-1 text-sm font-semibold">
           LIVE
         </span>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
-        <div className="rounded-lg border border-emerald-300/20 bg-emerald-300/10 p-4">
-          <div className="mb-4 flex items-center gap-2 text-emerald-200">
+        <div className="rc-border-primary-soft rc-bg-primary-soft rounded-lg border p-4">
+          <div className="rc-text-primary mb-4 flex items-center gap-2">
             <Gauge size={18} />
             <p className="text-sm font-semibold">Automation Load</p>
           </div>
@@ -24,8 +24,8 @@ export default function DashboardPreview() {
           <p className="mt-2 text-sm text-slate-300">Workflows optimized this week</p>
         </div>
 
-        <div className="rounded-lg border border-cyan-300/20 bg-cyan-300/10 p-4">
-          <div className="mb-4 flex items-center gap-2 text-cyan-100">
+        <div className="rc-border-secondary-soft rc-bg-secondary-soft rounded-lg border p-4">
+          <div className="rc-text-secondary mb-4 flex items-center gap-2">
             <Bot size={18} />
             <p className="text-sm font-semibold">AI Agents</p>
           </div>
@@ -33,13 +33,13 @@ export default function DashboardPreview() {
           <p className="mt-2 text-sm text-slate-300">Active product assistants</p>
         </div>
 
-        <div className="rounded-lg border border-amber-300/20 bg-amber-300/10 p-4 sm:col-span-2">
+        <div className="rc-border-accent-soft rc-bg-accent-soft rounded-lg border p-4 sm:col-span-2">
           <div className="mb-4 flex items-center justify-between gap-3">
-            <div className="flex items-center gap-2 text-amber-100">
+            <div className="flex items-center gap-2 text-violet-100">
               <Workflow size={18} />
               <p className="text-sm font-semibold">Current Build Queue</p>
             </div>
-            <ChartNoAxesCombined size={18} className="text-amber-100" />
+            <ChartNoAxesCombined size={18} className="text-violet-100" />
           </div>
           <div className="space-y-3 text-sm">
             {["GigOS launch systems", "Document intelligence layer", "Sports analytics lab"].map((item) => (

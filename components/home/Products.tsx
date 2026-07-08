@@ -8,7 +8,7 @@ export default function Products() {
       className="mx-auto max-w-7xl px-6 py-24"
     >
       <div className="mx-auto mb-12 max-w-3xl text-center">
-        <p className="font-mono text-sm font-semibold uppercase text-emerald-300">
+        <p className="rc-text-secondary font-mono text-sm font-semibold uppercase">
           Featured Products
         </p>
         <h2 className="mt-3 text-4xl font-bold text-white md:text-5xl">

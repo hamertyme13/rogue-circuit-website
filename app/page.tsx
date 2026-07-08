@@ -14,7 +14,7 @@ import {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#070914] text-white">
+    <main className="rc-bg-night min-h-screen text-white">
       <Navbar />
       <Hero />
       <TrustedTechnologies />

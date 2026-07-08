@@ -4,17 +4,17 @@ import DashboardPreview from "./DashboardPreview";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-white/10">
+    <section className="rc-bg-night relative overflow-hidden border-b border-white/10">
       <div className="grid-background">
         <div className="mx-auto grid min-h-[560px] max-w-7xl items-center gap-10 px-6 py-8 lg:grid-cols-[1.03fr_0.97fr]">
           <div className="text-center lg:text-left">
-            <p className="mb-5 font-mono text-sm font-semibold uppercase text-cyan-200">
+            <p className="rc-text-secondary mb-5 font-mono text-sm font-semibold uppercase">
               AI software studio
             </p>
 
             <h1 className="text-5xl font-black leading-[0.98] text-white md:text-6xl lg:text-7xl">
               Building
-              <span className="block text-emerald-300">AI-Powered Software</span>
+              <span className="rc-text-primary block">AI-Powered Software</span>
               <span className="block text-slate-100">for the Next Generation</span>
             </h1>
 

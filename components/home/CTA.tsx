@@ -4,9 +4,9 @@ import Button from "@/components/ui/Button";
 export default function CTA() {
   return (
     <section id="contact" className="px-6 py-24">
-      <div className="mx-auto grid max-w-5xl gap-8 rounded-lg border border-emerald-300/25 bg-[#0d1220] p-8 md:grid-cols-[1fr_auto] md:items-center md:p-12">
+      <div className="accent-depth rc-border-primary-soft rc-bg-surface-raised mx-auto grid max-w-5xl gap-8 rounded-lg border p-8 md:grid-cols-[1fr_auto] md:items-center md:p-12">
         <div>
-          <p className="mb-4 flex items-center gap-2 font-mono text-sm font-semibold uppercase text-emerald-300">
+          <p className="rc-text-secondary mb-4 flex items-center gap-2 font-mono text-sm font-semibold uppercase">
             <Sparkles size={17} />
             Join Our Journey
           </p>

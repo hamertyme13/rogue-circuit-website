@@ -11,14 +11,14 @@ const navItems = [
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#070914]/88 backdrop-blur">
+    <header className="rc-bg-night sticky top-0 z-50 border-b border-white/10 backdrop-blur">
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-6 py-4">
         <a href="#" className="flex items-center gap-3 text-lg font-bold tracking-wide">
-          <span className="grid size-10 place-items-center rounded-lg border border-emerald-300/30 bg-emerald-300/10 text-emerald-300">
+          <span className="rc-border-secondary-soft rc-bg-secondary-soft rc-text-secondary grid size-10 place-items-center rounded-lg border">
             <CircuitBoard size={21} strokeWidth={2.2} />
           </span>
           <span>
-            <span className="text-emerald-300">Rogue</span> Circuit
+            <span className="rc-text-primary">Rogue</span> Circuit
           </span>
         </a>
 
@@ -26,7 +26,7 @@ export default function Navbar() {
           <ul className="hidden items-center gap-7 text-sm text-slate-300 lg:flex">
             {navItems.map((item) => (
               <li key={item.href}>
-                <a href={item.href} className="transition hover:text-emerald-300">
+                <a href={item.href} className="transition hover:text-cyan-300">
                   {item.label}
                 </a>
               </li>

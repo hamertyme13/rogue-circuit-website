@@ -3,6 +3,15 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-primary: #39ff88;
+  --color-primary-soft: rgba(57, 255, 136, 0.14);
+  --color-secondary: #19e6ff;
+  --color-secondary-soft: rgba(25, 230, 255, 0.12);
+  --color-accent: #7c3cff;
+  --color-accent-soft: rgba(124, 60, 255, 0.18);
+  --color-night: #05060d;
+  --color-surface: #0a0d16;
+  --color-surface-raised: #101522;
 }
 
 @theme inline {
@@ -14,7 +23,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: var(--color-night);
     --foreground: #ededed;
   }
 }
@@ -23,7 +32,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
-  background: #070914;
+  background: var(--color-night);
 }
 
 a {
@@ -32,7 +41,76 @@ a {
 
 .grid-background {
   background-image:
-    linear-gradient(rgba(255, 255, 255, .045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, .045) 1px, transparent 1px);
+    radial-gradient(circle at 72% 20%, var(--color-accent-soft), transparent 26rem),
+    radial-gradient(circle at 18% 18%, rgba(25, 230, 255, 0.09), transparent 24rem),
+    linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
   background-size: 40px 40px;
+}
+
+.accent-depth {
+  background:
+    radial-gradient(circle at 85% 10%, var(--color-accent-soft), transparent 20rem),
+    linear-gradient(135deg, rgba(25, 230, 255, 0.08), rgba(57, 255, 136, 0.07));
+}
+
+.rc-text-primary {
+  color: var(--color-primary);
+}
+
+.rc-text-secondary {
+  color: var(--color-secondary);
+}
+
+.rc-text-accent {
+  color: var(--color-accent);
+}
+
+.rc-bg-night {
+  background-color: var(--color-night);
+}
+
+.rc-bg-surface {
+  background-color: var(--color-surface);
+}
+
+.rc-bg-surface-raised {
+  background-color: var(--color-surface-raised);
+}
+
+.rc-bg-primary {
+  background-color: var(--color-primary);
+}
+
+.rc-bg-primary-soft {
+  background-color: var(--color-primary-soft);
+}
+
+.rc-bg-secondary-soft {
+  background-color: var(--color-secondary-soft);
+}
+
+.rc-bg-accent-soft {
+  background-color: var(--color-accent-soft);
+}
+
+.rc-border-primary-soft {
+  border-color: rgba(57, 255, 136, 0.25);
+}
+
+.rc-border-secondary-soft {
+  border-color: rgba(25, 230, 255, 0.25);
+}
+
+.rc-border-accent-soft {
+  border-color: rgba(124, 60, 255, 0.3);
+}
+
+.rc-shadow-primary-glow {
+  box-shadow: 0 0 28px rgba(57, 255, 136, 0.22);
+}
+
+.rc-hover-secondary:hover {
+  border-color: rgba(25, 230, 255, 0.65);
+  background-color: var(--color-secondary-soft);
 }

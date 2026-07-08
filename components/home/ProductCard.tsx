@@ -25,7 +25,7 @@ export default function ProductCard({
     <Card>
       <div className="flex items-start justify-between">
         <div>
-            <div className="grid size-12 place-items-center rounded-lg border border-cyan-200/20 bg-cyan-200/10 font-mono text-sm font-bold text-cyan-100">
+            <div className="rc-border-secondary-soft rc-bg-secondary-soft rc-text-secondary grid size-12 place-items-center rounded-lg border font-mono text-sm font-bold">
               {icon}
             </div>
 
@@ -33,7 +33,7 @@ export default function ProductCard({
                 {name}
             </h3>
 
-            <p className="text-emerald-300">
+            <p className="rc-text-secondary">
                 {tagline}
             </p>
         </div>
@@ -49,7 +49,7 @@ export default function ProductCard({
         {stack.map((tech) => (
           <span
             key={tech}
-          className="rounded-full bg-slate-800 px-3 py-1 text-sm text-slate-300"
+          className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-sm text-slate-300"
           >
             {tech}
           </span>
@@ -64,7 +64,7 @@ export default function ProductCard({
 
         <div className="h-2 rounded-full bg-slate-800">
           <div
-            className="h-2 rounded-full bg-emerald-300 transition-all duration-700"
+            className="rc-bg-primary h-2 rounded-full transition-all duration-700"
             style={{ width: `${progress}%` }}
           />
         </div>

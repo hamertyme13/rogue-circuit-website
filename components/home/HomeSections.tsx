@@ -93,16 +93,16 @@ const latestProjects = [
 
 export function TrustedTechnologies() {
   return (
-    <section className="border-b border-white/10 bg-[#090d18] py-10">
+    <section className="rc-bg-surface border-b border-white/10 py-10">
       <div className="mx-auto max-w-7xl px-6">
-        <p className="mb-6 text-center font-mono text-xs font-semibold uppercase text-slate-500">
+        <p className="rc-text-secondary mb-6 text-center font-mono text-xs font-semibold uppercase">
           Trusted Technologies
         </p>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-7">
           {technologies.map((tech) => (
             <div
               key={tech}
-              className="flex min-h-16 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] px-3 text-center text-sm font-semibold text-slate-200"
+              className="rc-border-secondary-soft rc-bg-secondary-soft flex min-h-16 items-center justify-center rounded-lg border px-3 text-center text-sm font-semibold text-slate-100"
             >
               {tech}
             </div>
@@ -117,7 +117,7 @@ export function WhatWeBuild() {
   return (
     <section id="solutions" className="mx-auto max-w-7xl px-6 py-24">
       <div className="mb-12 max-w-3xl">
-        <p className="font-mono text-sm font-semibold uppercase text-cyan-200">
+        <p className="rc-text-secondary font-mono text-sm font-semibold uppercase">
           What We Build
         </p>
         <h2 className="mt-3 text-4xl font-bold text-white md:text-5xl">
@@ -129,9 +129,9 @@ export function WhatWeBuild() {
         {buildAreas.map(({ title, description, icon: Icon }) => (
           <article
             key={title}
-            className="rounded-lg border border-white/10 bg-white/[0.04] p-5 transition hover:border-cyan-200/50 hover:bg-cyan-200/10"
+            className="rc-hover-secondary rc-bg-surface-raised rounded-lg border border-white/10 p-5 transition"
           >
-            <Icon className="mb-5 text-cyan-100" size={28} />
+            <Icon className="rc-text-secondary mb-5" size={28} />
             <h3 className="text-lg font-semibold text-white">{title}</h3>
             <p className="mt-3 text-sm leading-6 text-slate-400">{description}</p>
           </article>
@@ -143,10 +143,10 @@ export function WhatWeBuild() {
 
 export function Mission() {
   return (
-    <section id="company" className="border-y border-white/10 bg-[#0c101d] py-24">
+    <section id="company" className="rc-bg-surface border-y border-white/10 py-24">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[0.85fr_1.15fr]">
         <div>
-          <p className="font-mono text-sm font-semibold uppercase text-amber-200">
+          <p className="font-mono text-sm font-semibold uppercase text-violet-200">
             Our Mission
           </p>
           <h2 className="mt-3 text-4xl font-bold text-white md:text-5xl">
@@ -174,7 +174,7 @@ export function WhyRogueCircuit() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-24">
       <div className="mb-12 max-w-3xl">
-        <p className="font-mono text-sm font-semibold uppercase text-emerald-300">
+        <p className="rc-text-primary font-mono text-sm font-semibold uppercase">
           Why Rogue Circuit
         </p>
         <h2 className="mt-3 text-4xl font-bold text-white md:text-5xl">
@@ -184,8 +184,8 @@ export function WhyRogueCircuit() {
 
       <div className="grid gap-5 md:grid-cols-3">
         {reasons.map(({ title, description, icon: Icon }) => (
-          <article key={title} className="rounded-lg border border-white/10 bg-white/[0.04] p-7">
-            <Icon className="text-emerald-300" size={30} />
+          <article key={title} className="rc-bg-surface-raised rounded-lg border border-white/10 p-7">
+            <Icon className="rc-text-primary" size={30} />
             <h3 className="mt-6 text-xl font-semibold text-white">{title}</h3>
             <p className="mt-4 leading-7 text-slate-400">{description}</p>
           </article>
@@ -197,24 +197,24 @@ export function WhyRogueCircuit() {
 
 export function LatestProjects() {
   return (
-    <section id="projects" className="border-y border-white/10 bg-[#090d18] py-24">
+    <section id="projects" className="rc-bg-surface border-y border-white/10 py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div>
-            <p className="font-mono text-sm font-semibold uppercase text-rose-200">
+            <p className="font-mono text-sm font-semibold uppercase text-violet-200">
               Latest Projects
             </p>
             <h2 className="mt-3 text-4xl font-bold text-white md:text-5xl">
               Experiments becoming products.
             </h2>
           </div>
-          <Rocket className="text-rose-200" size={42} />
+          <Rocket className="text-violet-200" size={42} />
         </div>
 
         <div className="grid gap-5 md:grid-cols-3">
           {latestProjects.map(({ label, detail, icon: Icon }) => (
-            <article key={label} className="rounded-lg border border-white/10 bg-white/[0.04] p-6">
-              <Icon className="text-rose-100" size={28} />
+            <article key={label} className="rc-border-accent-soft rc-bg-surface-raised rounded-lg border p-6">
+              <Icon className="text-violet-100" size={28} />
               <h3 className="mt-5 text-xl font-semibold text-white">{label}</h3>
               <p className="mt-3 leading-7 text-slate-400">{detail}</p>
             </article>
@@ -237,8 +237,8 @@ export function StackBand() {
           { label: "Workflow-aware", icon: Factory },
           { label: "Builder-focused", icon: Code2 },
         ].map(({ label, icon: Icon }) => (
-          <div key={label} className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/[0.03] p-4 text-slate-300">
-            <Icon className="text-cyan-100" size={20} />
+          <div key={label} className="rc-hover-secondary flex items-center gap-3 rounded-lg border border-white/10 bg-white/[0.03] p-4 text-slate-300 transition">
+            <Icon className="rc-text-secondary" size={20} />
             <span className="font-semibold">{label}</span>
           </div>
         ))}
