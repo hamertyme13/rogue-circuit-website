@@ -1,4 +1,5 @@
 import {
+  Activity,
   Blocks,
   Bot,
   BrainCircuit,
@@ -91,6 +92,30 @@ const latestProjects = [
   },
 ];
 
+const proofStats = [
+  {
+    value: "5",
+    label: "product tracks",
+    detail: "Career, documents, gig work, analytics, and simulation products moving through the lab.",
+  },
+  {
+    value: "3",
+    label: "active build lanes",
+    detail: "GigOS, document intelligence, and sports analytics are the current execution focus.",
+  },
+  {
+    value: "100%",
+    label: "AI-native direction",
+    detail: "Each product is designed around automation, data intelligence, or assistant workflows.",
+  },
+];
+
+const momentumItems = [
+  "Positioning tightened around leverage for solo founders, operators, and small teams.",
+  "Product pipeline organized into launch systems, retrieval layers, and analytics tooling.",
+  "Visual system upgraded with electric green actions, cyan technology cues, and sparse purple depth.",
+];
+
 export function TrustedTechnologies() {
   return (
     <section className="rc-bg-surface border-b border-white/10 py-10">
@@ -136,6 +161,65 @@ export function WhatWeBuild() {
             <p className="mt-3 text-sm leading-6 text-slate-400">{description}</p>
           </article>
         ))}
+      </div>
+    </section>
+  );
+}
+
+export function ProofMomentum() {
+  return (
+    <section id="momentum" className="rc-bg-surface border-y border-white/10 py-20">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+          <div className="max-w-3xl">
+            <p className="rc-text-primary font-mono text-sm font-semibold uppercase">
+              Proof & Momentum
+            </p>
+            <h2 className="mt-3 text-4xl font-bold text-white md:text-5xl">
+              A product lab with visible traction.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-slate-300">
+              Rogue Circuit is building a portfolio, not a single demo. The work
+              is organized around repeatable product tracks, sharper signals,
+              and practical systems that can become durable software.
+            </p>
+          </div>
+          <Activity className="rc-text-primary" size={42} />
+        </div>
+
+        <div className="grid gap-5 lg:grid-cols-[1fr_0.9fr]">
+          <div className="grid gap-4 md:grid-cols-3">
+            {proofStats.map((stat) => (
+              <article
+                key={stat.label}
+                className="rc-bg-surface-raised rounded-lg border border-white/10 p-6"
+              >
+                <p className="rc-text-primary font-mono text-4xl font-black">
+                  {stat.value}
+                </p>
+                <h3 className="mt-4 text-lg font-semibold text-white">{stat.label}</h3>
+                <p className="mt-3 text-sm leading-6 text-slate-400">{stat.detail}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="accent-depth rc-border-accent-soft rounded-lg border p-6">
+            <p className="font-mono text-sm font-semibold uppercase text-violet-100">
+              Latest lab notes
+            </p>
+            <div className="mt-5 space-y-3">
+              {momentumItems.map((item) => (
+                <div
+                  key={item}
+                  className="flex gap-3 rounded-md bg-black/20 p-3 text-sm leading-6 text-slate-300"
+                >
+                  <span className="rc-text-secondary mt-1 font-mono text-xs">RC</span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
