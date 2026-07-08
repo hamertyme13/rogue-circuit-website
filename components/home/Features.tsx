@@ -35,9 +35,9 @@ export default function Features() {
         {features.map((feature) => (
           <div
             key={feature.title}
-            className="rounded-2xl border border-slate-800 bg-slate-900/50 p-8 transition hover:border-green-500"
+            className="rc-hover-secondary rounded-2xl border border-slate-800 bg-slate-900/50 p-8 transition"
           >
-            <h3 className="mb-4 text-2xl font-semibold text-green-400">
+            <h3 className="rc-text-secondary mb-4 text-2xl font-semibold">
               {feature.title}
             </h3>
 

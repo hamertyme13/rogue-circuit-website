@@ -7,15 +7,16 @@ export default function Card({
 }) {
   return (
     <div className="
-      rounded-3xl
+      rounded-lg
       border
       border-white/10
-      bg-white/5
+      rc-bg-surface-raised
       backdrop-blur-xl
       p-8
       transition-all
       duration-300
-      hover:border-green-500
+      rc-hover-secondary
+      hover:shadow-[0_0_40px_rgba(25,230,255,0.12)]
       hover:-translate-y-2
     ">
       {children}
